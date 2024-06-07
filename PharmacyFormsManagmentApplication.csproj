@@ -46,31 +46,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminDashBord.cs">
+    <Compile Include="Form_Pages\Adminastator_page\AdminDashBord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDashBord.Designer.cs">
+    <Compile Include="Form_Pages\Adminastator_page\AdminDashBord.Designer.cs">
       <DependentUpon>AdminDashBord.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionData\ConnectionFunction.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="Form_Pages\Adminastator_page\UC_AddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Adminastator_page\UC_AddUser.Designer.cs">
+      <DependentUpon>UC_AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pages\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Form_Pages\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="PharmacistDashBord.cs">
+    <Compile Include="Form_Pages\Pharmacist_page\PharmacistDashBord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PharmacistDashBord.Designer.cs">
+    <Compile Include="Form_Pages\Pharmacist_page\PharmacistDashBord.Designer.cs">
       <DependentUpon>PharmacistDashBord.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminDashBord.resx">
+    <EmbeddedResource Include="Form_Pages\Adminastator_page\AdminDashBord.resx">
       <DependentUpon>AdminDashBord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Form_Pages\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

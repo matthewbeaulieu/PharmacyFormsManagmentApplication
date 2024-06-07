@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PharmacyFormsManagmentApplication
+namespace PharmacyFormsManagmentApplication.Form_Pages.Adminastator_page
 {
-    public partial class AdminDashBord : Form
+    public partial class UC_AddUser : UserControl
     {
-        public AdminDashBord()
+        public UC_AddUser()
         {
             InitializeComponent();
         }
