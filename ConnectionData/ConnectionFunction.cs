@@ -27,5 +27,15 @@ namespace PharmacyFormsManagmentApplication.ConnectionData
             adapter.Fill(dataSet);
             return dataSet;
         }
+        public void AddData(string query)
+        {
+            SqlConnection connection = GetConnection();
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            connection.Open();
+            command.CommandText = query;
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
     }
 }

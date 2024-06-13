@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +60,30 @@
     <Compile Include="Form_Pages\Adminastator_page\UC_AddUser.Designer.cs">
       <DependentUpon>UC_AddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Pages\Adminastator_page\UC_MainPageDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Adminastator_page\UC_MainPageDisplay.Designer.cs">
+      <DependentUpon>UC_MainPageDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pages\Adminastator_page\UC_medications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Adminastator_page\UC_medications.Designer.cs">
+      <DependentUpon>UC_medications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pages\Adminastator_page\UC_profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Adminastator_page\UC_profile.Designer.cs">
+      <DependentUpon>UC_profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pages\Adminastator_page\UC_ViewUsersData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Adminastator_page\UC_ViewUsersData.Designer.cs">
+      <DependentUpon>UC_ViewUsersData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Pages\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,13 +96,67 @@
     <Compile Include="Form_Pages\Pharmacist_page\PharmacistDashBord.Designer.cs">
       <DependentUpon>PharmacistDashBord.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\UC_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\UC_Customer.Designer.cs">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\UC_Display.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\UC_Display.Designer.cs">
+      <DependentUpon>UC_Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\UC_Medications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\UC_Medications.Designer.cs">
+      <DependentUpon>UC_Medications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\UC_Orders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\UC_Orders.Designer.cs">
+      <DependentUpon>UC_Orders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Pages\Adminastator_page\AdminDashBord.resx">
       <DependentUpon>AdminDashBord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Adminastator_page\UC_AddUser.resx">
+      <DependentUpon>UC_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Adminastator_page\UC_MainPageDisplay.resx">
+      <DependentUpon>UC_MainPageDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Adminastator_page\UC_medications.resx">
+      <DependentUpon>UC_medications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Adminastator_page\UC_profile.resx">
+      <DependentUpon>UC_profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Adminastator_page\UC_ViewUsersData.resx">
+      <DependentUpon>UC_ViewUsersData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Pages\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Pharmacist_page\PharmacistDashBord.resx">
+      <DependentUpon>PharmacistDashBord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Pharmacist_page\UC_Customer.resx">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Pharmacist_page\UC_Display.resx">
+      <DependentUpon>UC_Display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Pharmacist_page\UC_Medications.resx">
+      <DependentUpon>UC_Medications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Pharmacist_page\UC_Orders.resx">
+      <DependentUpon>UC_Orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

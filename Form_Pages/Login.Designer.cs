@@ -99,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1380, 768);
@@ -119,10 +119,10 @@
         #endregion
 
         internal System.Windows.Forms.Label Label1;
-        private System.Windows.Forms.TextBox text_UserName;
         public System.Windows.Forms.TextBox text_Password;
         public System.Windows.Forms.Button Button_login;
         private System.Windows.Forms.Button Button_Exit;
+        public System.Windows.Forms.TextBox text_UserName;
     }
 }
 

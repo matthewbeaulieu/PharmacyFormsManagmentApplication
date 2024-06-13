@@ -40,15 +40,15 @@ namespace PharmacyFormsManagmentApplication
                 if (DS.Tables[0].Rows.Count!=0)
                 {
                     string role = DS.Tables[0].Rows[0][1].ToString();
-                    if (role == "ADMIN")
+                    if (role == "administrator")
                     {
-                        AdminDashBord admindashbord = new AdminDashBord();
+                        AdminDashBord admindashbord = new AdminDashBord(text_UserName.Text);
                         admindashbord.Show();
                         this.Hide();
                     }
                     else if(role == "Pharmacist")
                     {
-                        PharmacistDashBord pharmacistDashBord = new PharmacistDashBord();
+                        PharmacistDashBord pharmacistDashBord = new PharmacistDashBord(text_UserName.Text);
                         pharmacistDashBord.Show();
                         this.Hide();
                     }
