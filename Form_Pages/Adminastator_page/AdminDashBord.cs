@@ -13,7 +13,7 @@ namespace PharmacyFormsManagmentApplication
 {
     public partial class AdminDashBord : Form
     {
-        string user = "";
+        String user = "";
         
         public AdminDashBord()
         {
@@ -24,7 +24,7 @@ namespace PharmacyFormsManagmentApplication
         {
             get { return user.ToString(); }
         }
-        public AdminDashBord(string userName)
+        public AdminDashBord(String userName)
         {
             InitializeComponent();
             label_username.Text = userName;
@@ -82,6 +82,16 @@ namespace PharmacyFormsManagmentApplication
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

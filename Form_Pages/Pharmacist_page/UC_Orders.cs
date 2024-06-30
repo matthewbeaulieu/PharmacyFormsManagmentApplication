@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
 {
@@ -23,7 +24,15 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                //userName = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
 
+            }
+            catch
+            {
+
+            }
         }
 
         private void UC_Orders_Load(object sender, EventArgs e)
@@ -31,6 +40,16 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
             qeury = "Select * from OrderStatus";
             DataSet ds = connectionfunction.GetData(qeury);
             dataGridView1.DataSource = ds.Tables[0];
+
+        }
+
+        private void buttonADD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -21,11 +21,11 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Adminastator_page
         }
         public string ID
         {
-            set { text_username.Text = value; }
+            set { label_role.Text = value; }
         }
         private void UC_profile_Load(object sender, EventArgs e)
         {
-            query = "Select * from UsersInformation where UserName = '"+text_username.Text+"'";
+            query = "Select * from UsersInformation where UserName = '"+label_role.Text+"'";
             DataSet ds = connectionFunction.GetData(query);
             label_role.Text = ds.Tables[0].Rows[0][1].ToString();
             label_name.Text = ds.Tables[0].Rows[0][2].ToString();
@@ -45,6 +45,21 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Adminastator_page
             
 
             query = "update UsersInformation set UserPassword ='"+password+"'";
+
+        }
+
+        private void label_role_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_password_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

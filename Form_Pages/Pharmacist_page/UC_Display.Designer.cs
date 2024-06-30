@@ -52,6 +52,7 @@
             this.dataGridView_customer.Name = "dataGridView_customer";
             this.dataGridView_customer.Size = new System.Drawing.Size(522, 404);
             this.dataGridView_customer.TabIndex = 1;
+            this.dataGridView_customer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_customer_CellContentClick);
             // 
             // dataGridView_orders
             // 

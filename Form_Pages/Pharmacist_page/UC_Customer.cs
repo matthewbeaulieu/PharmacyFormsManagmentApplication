@@ -16,11 +16,13 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
     public partial class UC_Customer : UserControl
     {
         ConnectionFunction connectionFunction = new ConnectionFunction();
+        PharmacistDashBord dashbord;
         string query;
         string current;
         public UC_Customer()
         {
             InitializeComponent();
+            
         }
         public string ID
         {
@@ -32,12 +34,29 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
             DataSet dataset = connectionFunction.GetData(query);
             dataGridView1.DataSource = dataset.Tables[0];
         }
-
+        string CusID;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                CusID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            }
+            catch
+            {
+
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            AddMedication addMedication = new AddMedication(CusID);
+            addMedication.Show();
+            this.Hide();
+
+
 
         }
-
         //need to fix connection so it actualy get and delete 
         string username;
         private void button_Delete_Click(object sender, EventArgs e)
@@ -74,5 +93,7 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
                 MessageBox.Show("error please enter Correct Information!");
             }
         }
+        
+        
     }
 }

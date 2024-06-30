@@ -42,6 +42,7 @@
             this.label_email = new System.Windows.Forms.Label();
             this.label_phone = new System.Windows.Forms.Label();
             this.button_save = new System.Windows.Forms.Button();
+            this.button_Addmed = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             // 
             // button_Delete
             // 
-            this.button_Delete.Location = new System.Drawing.Point(974, 744);
+            this.button_Delete.Location = new System.Drawing.Point(772, 535);
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.Size = new System.Drawing.Size(75, 23);
             this.button_Delete.TabIndex = 2;
@@ -164,10 +165,21 @@
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
+            // button_Addmed
+            // 
+            this.button_Addmed.Location = new System.Drawing.Point(786, 290);
+            this.button_Addmed.Name = "button_Addmed";
+            this.button_Addmed.Size = new System.Drawing.Size(150, 23);
+            this.button_Addmed.TabIndex = 14;
+            this.button_Addmed.Text = "Add Medications";
+            this.button_Addmed.UseVisualStyleBackColor = true;
+            this.button_Addmed.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UC_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button_Addmed);
             this.Controls.Add(this.button_save);
             this.Controls.Add(this.label_phone);
             this.Controls.Add(this.label_email);
@@ -207,5 +219,7 @@
         private System.Windows.Forms.Label label_email;
         private System.Windows.Forms.Label label_phone;
         private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.Button button_Addmed;
+        
     }
 }

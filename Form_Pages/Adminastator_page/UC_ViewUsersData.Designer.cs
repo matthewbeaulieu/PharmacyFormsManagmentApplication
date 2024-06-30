@@ -41,6 +41,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1098, 400);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -54,7 +55,7 @@
             // 
             // button_delete
             // 
-            this.button_delete.Location = new System.Drawing.Point(671, 545);
+            this.button_delete.Location = new System.Drawing.Point(466, 580);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(112, 46);
             this.button_delete.TabIndex = 2;

@@ -14,7 +14,7 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Adminastator_page
     public partial class UC_MainPageDisplay : UserControl
     {
         ConnectionFunction connectionFunction = new ConnectionFunction();
-        string qeury;
+        
         public UC_MainPageDisplay()
         {
             InitializeComponent();

@@ -66,12 +66,6 @@
     <Compile Include="Form_Pages\Adminastator_page\UC_MainPageDisplay.Designer.cs">
       <DependentUpon>UC_MainPageDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Pages\Adminastator_page\UC_medications.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form_Pages\Adminastator_page\UC_medications.Designer.cs">
-      <DependentUpon>UC_medications.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form_Pages\Adminastator_page\UC_profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +83,12 @@
     </Compile>
     <Compile Include="Form_Pages\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\AddMedication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Pages\Pharmacist_page\AddMedication.Designer.cs">
+      <DependentUpon>AddMedication.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Pages\Pharmacist_page\PharmacistDashBord.cs">
       <SubType>Form</SubType>
@@ -131,9 +131,6 @@
     <EmbeddedResource Include="Form_Pages\Adminastator_page\UC_MainPageDisplay.resx">
       <DependentUpon>UC_MainPageDisplay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Pages\Adminastator_page\UC_medications.resx">
-      <DependentUpon>UC_medications.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form_Pages\Adminastator_page\UC_profile.resx">
       <DependentUpon>UC_profile.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Pages\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pages\Pharmacist_page\AddMedication.resx">
+      <DependentUpon>AddMedication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Pages\Pharmacist_page\PharmacistDashBord.resx">
       <DependentUpon>PharmacistDashBord.cs</DependentUpon>
