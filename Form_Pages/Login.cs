@@ -26,10 +26,11 @@ namespace PharmacyFormsManagmentApplication
             DataSet dataSet = confun.GetData(query);
             if (dataSet.Tables[0].Rows.Count==0)
             {
-                if(text_UserName.Text=="root" && text_Password.Text == "root")
+                // only if there are no users in user database!
+                if(text_UserName.Text=="admin" && text_Password.Text == "admin")
                 {
-                    AdminDashBord admb = new AdminDashBord();
-                    admb.Show();
+                    AdminDashBord admindashbord = new AdminDashBord();
+                    admindashbord.Show();
                     this.Hide();
                 }
             }
@@ -55,7 +56,9 @@ namespace PharmacyFormsManagmentApplication
                 }
                 else
                 {
-                    throw new Exception();
+                    MessageBox.Show("UserName and Password are wrong try again");
+                    text_UserName.Clear();
+                    text_Password.Clear();
                 }
             }
 
@@ -64,6 +67,11 @@ namespace PharmacyFormsManagmentApplication
         private void Button_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -33,28 +33,26 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
 
         private void AddMedication_Load(object sender, EventArgs e)
         {
-                query = "Select * from medication";
-                DataSet dataSet = connectionfunction.GetData(query);
-                dataGridView1.DataSource = dataSet.Tables[0];
+            query = "select * from Customer where CustomerId = '" + id + "'";
+            DataSet ds = connectionfunction.GetData(query);
+            comboBox1.Text = ds.Tables[0].Rows[0][1].ToString();
+            label_firstname.Text = ds.Tables[0].Rows[0][2].ToString();
+            label_middle.Text = ds.Tables[0].Rows[0][3].ToString();
+            label_lastname.Text = ds.Tables[0].Rows[0][4].ToString();
+            label_email.Text = ds.Tables[0].Rows[0][5].ToString();
+            label_phone.Text = ds.Tables[0].Rows[0][6].ToString();
+            textBox_med1.Text = ds.Tables[0].Rows[0][7].ToString();
+            textBox_med2.Text = ds.Tables[0].Rows[0][8].ToString();
+            textBox_med3.Text = ds.Tables[0].Rows[0][9].ToString();
+            textBox_med4.Text = ds.Tables[0].Rows[0][10].ToString();
+            textBox_med5.Text = ds.Tables[0].Rows[0][11].ToString();
+            textBox_med6.Text = ds.Tables[0].Rows[0][12].ToString();
+            Med7.Text = ds.Tables[0].Rows[0][13].ToString();
+            textBox_med8.Text = ds.Tables[0].Rows[0][14].ToString();
+            textBox_med9.Text = ds.Tables[0].Rows[0][15].ToString();
+            textBox_med10.Text = ds.Tables[0].Rows[0][16].ToString();
 
-
-                query = "select * from Customer where CustomerId = '" + id + "'";
-                DataSet ds = connectionfunction.GetData(query);
-                label_firstname.Text = ds.Tables[0].Rows[0][1].ToString();
-                label_middle.Text = ds.Tables[0].Rows[0][2].ToString();
-                label_lastname.Text = ds.Tables[0].Rows[0][3].ToString();
-                label_email.Text = ds.Tables[0].Rows[0][4].ToString();
-                label_phone.Text = ds.Tables[0].Rows[0][5].ToString();
-                textBox_med1.Text = ds.Tables[0].Rows[0][6].ToString();
-                textBox_med2.Text = ds.Tables[0].Rows[0][7].ToString();
-                textBox_med3.Text = ds.Tables[0].Rows[0][8].ToString();
-                textBox_med4.Text = ds.Tables[0].Rows[0][9].ToString();
-                textBox_med5.Text = ds.Tables[0].Rows[0][10].ToString();
-                textBox_med6.Text = ds.Tables[0].Rows[0][11].ToString();
-                Med7.Text = ds.Tables[0].Rows[0][12].ToString();
-                textBox_med8.Text = ds.Tables[0].Rows[0][13].ToString();
-                textBox_med9.Text = ds.Tables[0].Rows[0][14].ToString();
-                textBox_med10.Text = ds.Tables[0].Rows[0][15].ToString();
+                timer1.Start();
 
         }
 
@@ -75,8 +73,13 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
             string Medication8 = textBox_med8.Text;
             string Medication9 = textBox_med9.Text;
             string Medication10 = textBox_med10.Text;
-            
-            if(Medication1 != "")
+            string dropdown = comboBox1.Text;
+            if (dropdown != "")
+            {
+                query = "update Customer set OrderStatus ='" + dropdown + "' Where Customerid ='" + id + "'";
+                connectionfunction.AddData(query);
+            }
+            if (Medication1 != "")
             {
                 query = "update Customer set Medication1 ='" + Medication1 + "' Where Customerid ='" + id + "'";
                 connectionfunction.AddData(query);
@@ -128,7 +131,17 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
             }
             
         }
+        public void refresh()
+        {
+            query = "Select * from medication";
+            DataSet dataSet = connectionfunction.GetData(query);
+            dataGridView1.DataSource = dataSet.Tables[0];
 
-
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            refresh();
+            timer1.Start();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label_firstname = new System.Windows.Forms.Label();
             this.label_middle = new System.Windows.Forms.Label();
             this.label_lastname = new System.Windows.Forms.Label();
@@ -58,58 +59,72 @@
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_firstname
             // 
             this.label_firstname.AutoSize = true;
+            this.label_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_firstname.ForeColor = System.Drawing.Color.White;
             this.label_firstname.Location = new System.Drawing.Point(118, 118);
             this.label_firstname.Name = "label_firstname";
-            this.label_firstname.Size = new System.Drawing.Size(35, 13);
+            this.label_firstname.Size = new System.Drawing.Size(82, 20);
             this.label_firstname.TabIndex = 0;
-            this.label_firstname.Text = "label1";
+            this.label_firstname.Text = "FirstName";
             // 
             // label_middle
             // 
             this.label_middle.AutoSize = true;
+            this.label_middle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_middle.ForeColor = System.Drawing.Color.White;
             this.label_middle.Location = new System.Drawing.Point(117, 177);
             this.label_middle.Name = "label_middle";
-            this.label_middle.Size = new System.Drawing.Size(35, 13);
+            this.label_middle.Size = new System.Drawing.Size(55, 20);
             this.label_middle.TabIndex = 1;
-            this.label_middle.Text = "label2";
+            this.label_middle.Text = "Middle";
             // 
             // label_lastname
             // 
             this.label_lastname.AutoSize = true;
+            this.label_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_lastname.ForeColor = System.Drawing.Color.White;
             this.label_lastname.Location = new System.Drawing.Point(117, 228);
             this.label_lastname.Name = "label_lastname";
-            this.label_lastname.Size = new System.Drawing.Size(35, 13);
+            this.label_lastname.Size = new System.Drawing.Size(82, 20);
             this.label_lastname.TabIndex = 2;
-            this.label_lastname.Text = "label3";
+            this.label_lastname.Text = "LastName";
             // 
             // label_email
             // 
             this.label_email.AutoSize = true;
+            this.label_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_email.ForeColor = System.Drawing.Color.White;
             this.label_email.Location = new System.Drawing.Point(118, 279);
             this.label_email.Name = "label_email";
-            this.label_email.Size = new System.Drawing.Size(35, 13);
+            this.label_email.Size = new System.Drawing.Size(46, 20);
             this.label_email.TabIndex = 3;
-            this.label_email.Text = "label4";
+            this.label_email.Text = "email";
             // 
             // label_phone
             // 
             this.label_phone.AutoSize = true;
+            this.label_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_phone.ForeColor = System.Drawing.Color.White;
             this.label_phone.Location = new System.Drawing.Point(117, 330);
             this.label_phone.Name = "label_phone";
-            this.label_phone.Size = new System.Drawing.Size(35, 13);
+            this.label_phone.Size = new System.Drawing.Size(88, 20);
             this.label_phone.TabIndex = 4;
-            this.label_phone.Text = "label5";
+            this.label_phone.Text = "PhoneNum";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(41, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 33);
@@ -121,6 +136,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(371, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(245, 33);
@@ -210,6 +226,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(800, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(241, 33);
@@ -300,7 +317,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(765, 174);
+            this.dataGridView1.Location = new System.Drawing.Point(761, 110);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(299, 404);
             this.dataGridView1.TabIndex = 28;
@@ -316,11 +333,42 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Filled Ready for Pickup",
+            "Needs Attention",
+            "No Current Order"});
+            this.comboBox1.Location = new System.Drawing.Point(207, 390);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(92, 398);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 16);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "OrderStatus";
+            // 
             // AddMedication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(1088, 731);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label13);
@@ -392,5 +440,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label14;
     }
 }

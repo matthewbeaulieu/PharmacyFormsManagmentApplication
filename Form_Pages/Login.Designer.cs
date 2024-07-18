@@ -73,11 +73,12 @@
             this.Button_login.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.Button_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Button_login.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_login.ForeColor = System.Drawing.Color.Black;
             this.Button_login.Location = new System.Drawing.Point(593, 320);
             this.Button_login.Name = "Button_login";
-            this.Button_login.Size = new System.Drawing.Size(147, 23);
+            this.Button_login.Size = new System.Drawing.Size(147, 33);
             this.Button_login.TabIndex = 3;
             this.Button_login.Text = "Login";
             this.Button_login.UseVisualStyleBackColor = false;
@@ -86,10 +87,12 @@
             // Button_Exit
             // 
             this.Button_Exit.BackColor = System.Drawing.Color.Red;
+            this.Button_Exit.FlatAppearance.BorderSize = 0;
+            this.Button_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Exit.Location = new System.Drawing.Point(593, 381);
             this.Button_Exit.Name = "Button_Exit";
-            this.Button_Exit.Size = new System.Drawing.Size(147, 23);
+            this.Button_Exit.Size = new System.Drawing.Size(147, 32);
             this.Button_Exit.TabIndex = 4;
             this.Button_Exit.Text = "Exit";
             this.Button_Exit.UseVisualStyleBackColor = false;
@@ -111,6 +114,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

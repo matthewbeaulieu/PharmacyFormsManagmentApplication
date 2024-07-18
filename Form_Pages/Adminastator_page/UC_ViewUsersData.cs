@@ -27,6 +27,11 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Adminastator_page
         }
         private void UC_ViewUsersData_Load(object sender, EventArgs e)
         {
+            refresh();
+            timer1.Start();
+        }
+        public void refresh()
+        {
             query = "Select * from UsersInformation";
             DataSet ds = confun.GetData(query);
             dataGridView1.DataSource = ds.Tables[0];
@@ -62,5 +67,10 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Adminastator_page
             
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            refresh();
+            timer1.Start();
+        }
     }
 }

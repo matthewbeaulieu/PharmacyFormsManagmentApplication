@@ -29,6 +29,11 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
 
         private void UC_Medications_Load(object sender, EventArgs e)
         {
+            
+            timer1.Start();
+        }
+        public void refresh()
+        {
             query = "Select * from medication";
             DataSet dataSet = connectionFunction.GetData(query);
             dataGridView1.DataSource = dataSet.Tables[0];
@@ -61,17 +66,30 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
             }
             catch 
             {
-                MessageBox.Show("error please enter Correct Information!");
+                MessageBox.Show("Something went wrong!");
             }
         }
-        
+       
 
-        private void button_med_Click(object sender, EventArgs e)
-        { 
-            query = "delete from medication where medications = '" + user + "'";
-            connectionFunction.AddData(query);
-            UC_Medications_Load(this, null);
-           
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            refresh();
+            timer1.Start();
+        }
+
+        private void Button_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                query = "delete from medication where medications = '" + user + "'";
+                connectionFunction.AddData(query);
+                UC_Medications_Load(this, null);
+            }
+            catch
+            {
+                MessageBox.Show("Something went wrong!");
+            }
+            
         }
     }
 }

@@ -30,7 +30,12 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
         }
         private void UC_Customer_Load(object sender, EventArgs e)
         {
-            query ="Select * from Customer";
+           
+            timer1.Start();
+        }
+        public void refreshCustomer()
+        {
+            query = "Select * from Customer";
             DataSet dataset = connectionFunction.GetData(query);
             dataGridView1.DataSource = dataset.Tables[0];
         }
@@ -40,33 +45,49 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
             try
             {
                 CusID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                MessageBox.Show("Selected user: " + CusID);
 
             }
             catch
             {
-
+                
             }
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            if(CusID == null)
+            {
 
-            AddMedication addMedication = new AddMedication(CusID);
-            addMedication.Show();
-            this.Hide();
+                MessageBox.Show("No Customerrr Selected");
+            }
+            else
+            {
+                AddMedication addMedication = new AddMedication(CusID);
+                addMedication.Show();
+                this.Hide();
+            }
+            
 
 
 
         }
-        //need to fix connection so it actualy get and delete 
+        //Delete Selected customer from DB
         string username;
         private void button_Delete_Click(object sender, EventArgs e)
         {
-            if (current != username)
+            try
             {
-                query = "Delete from Customer where username ='" + username + "'";
+                query = "Delete from Customer where CustomerId ='" + CusID + "'";
                 connectionFunction.AddData(query);
                 UC_Customer_Load(this, null);
             }
+            catch
+            {
+                MessageBox.Show("Something went wrong try again");
+            }
+                
+            
         }
 
         private void button_save_Click(object sender, EventArgs e)
@@ -93,7 +114,11 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
                 MessageBox.Show("error please enter Correct Information!");
             }
         }
-        
-        
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            refreshCustomer();
+            timer1.Start();
+        }
     }
 }

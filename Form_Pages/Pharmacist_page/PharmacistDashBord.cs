@@ -32,7 +32,6 @@ namespace PharmacyFormsManagmentApplication
         {
             uC_Display1.Visible = true;
             uC_Customer1.Visible = false;
-            uC_Orders1.Visible = false;
             uC_Medications1.Visible = false;
         }
 
@@ -54,30 +53,20 @@ namespace PharmacyFormsManagmentApplication
         {
             uC_Display1.Visible = true;
             uC_Customer1.Visible = false;
-            uC_Orders1.Visible = false;
             uC_Medications1.Visible = false;
         }
 
         private void CustomerInfo_button_Click(object sender, EventArgs e)
         {
             uC_Customer1.Visible = true;
-            uC_Orders1.Visible = false;
             uC_Display1.Visible = false;
             uC_Medications1.Visible = false;
         }
 
-        private void Orders_Click(object sender, EventArgs e)
-        {
-            uC_Orders1.Visible = true;
-            uC_Display1.Visible = false;
-            uC_Customer1.Visible = false;
-            uC_Medications1.Visible = false;
-        }
 
         private void button_med_Click(object sender, EventArgs e)
         {
             uC_Customer1.Visible = false;
-            uC_Orders1.Visible = false;
             uC_Display1.Visible = false;
             uC_Medications1.Visible = true;
         }

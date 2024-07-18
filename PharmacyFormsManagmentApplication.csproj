@@ -114,12 +114,6 @@
     <Compile Include="Form_Pages\Pharmacist_page\UC_Medications.Designer.cs">
       <DependentUpon>UC_Medications.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Pages\Pharmacist_page\UC_Orders.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form_Pages\Pharmacist_page\UC_Orders.Designer.cs">
-      <DependentUpon>UC_Orders.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Pages\Adminastator_page\AdminDashBord.resx">
@@ -154,9 +148,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Pages\Pharmacist_page\UC_Medications.resx">
       <DependentUpon>UC_Medications.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Pages\Pharmacist_page\UC_Orders.resx">
-      <DependentUpon>UC_Orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
