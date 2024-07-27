@@ -44,6 +44,7 @@ namespace PharmacyFormsManagmentApplication.Form_Pages.Pharmacist_page
             try
             {
                 user = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                MessageBox.Show("user ID:" + user);
 
             }
             catch

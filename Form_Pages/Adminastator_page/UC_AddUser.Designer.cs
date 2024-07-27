@@ -88,9 +88,11 @@
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(177, 20);
             this.textBox_name.TabIndex = 3;
+            this.textBox_name.Text = "Name";
             // 
             // _UserRoleDesign
             // 
+            this._UserRoleDesign.BackColor = System.Drawing.SystemColors.Window;
             this._UserRoleDesign.FormattingEnabled = true;
             this._UserRoleDesign.Items.AddRange(new object[] {
             "administrator",
@@ -99,6 +101,7 @@
             this._UserRoleDesign.Name = "_UserRoleDesign";
             this._UserRoleDesign.Size = new System.Drawing.Size(177, 21);
             this._UserRoleDesign.TabIndex = 4;
+            this._UserRoleDesign.Text = "Role";
             // 
             // label2
             // 
@@ -119,9 +122,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(69, 166);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 24);
+            this.label3.Size = new System.Drawing.Size(97, 24);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Name";
+            this.label3.Text = "Full Name";
             // 
             // dateTimePicker_dob
             // 
@@ -169,6 +172,7 @@
             this.textBox_UserName.Name = "textBox_UserName";
             this.textBox_UserName.Size = new System.Drawing.Size(141, 20);
             this.textBox_UserName.TabIndex = 11;
+            this.textBox_UserName.Text = "User Name";
             // 
             // textBox_Password
             // 
@@ -176,6 +180,7 @@
             this.textBox_Password.Name = "textBox_Password";
             this.textBox_Password.Size = new System.Drawing.Size(141, 20);
             this.textBox_Password.TabIndex = 12;
+            this.textBox_Password.Text = "Password";
             // 
             // UC_AddUser
             // 

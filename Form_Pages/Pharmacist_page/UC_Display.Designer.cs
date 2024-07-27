@@ -31,10 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_customer = new System.Windows.Forms.DataGridView();
-            this.dataGridView_orders = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_customer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_orders)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,38 +50,43 @@
             // dataGridView_customer
             // 
             this.dataGridView_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_customer.Location = new System.Drawing.Point(3, 192);
+            this.dataGridView_customer.Location = new System.Drawing.Point(57, 192);
             this.dataGridView_customer.Name = "dataGridView_customer";
-            this.dataGridView_customer.Size = new System.Drawing.Size(522, 404);
+            this.dataGridView_customer.Size = new System.Drawing.Size(1000, 404);
             this.dataGridView_customer.TabIndex = 1;
             this.dataGridView_customer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_customer_CellContentClick);
-            // 
-            // dataGridView_orders
-            // 
-            this.dataGridView_orders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_orders.Location = new System.Drawing.Point(543, 192);
-            this.dataGridView_orders.Name = "dataGridView_orders";
-            this.dataGridView_orders.Size = new System.Drawing.Size(558, 404);
-            this.dataGridView_orders.TabIndex = 2;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(459, 657);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 49);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Complete Order";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // UC_Display
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.Controls.Add(this.dataGridView_orders);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView_customer);
             this.Controls.Add(this.label1);
             this.Name = "UC_Display";
             this.Size = new System.Drawing.Size(1104, 770);
             this.Load += new System.EventHandler(this.UC_Display_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_customer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_orders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,7 +96,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView_customer;
-        private System.Windows.Forms.DataGridView dataGridView_orders;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }
