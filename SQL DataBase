@@ -1,0 +1,235 @@
+USE [master]
+GO
+
+/****** Object:  Database [Pharmacy]    Script Date: 7/31/2024 12:21:21 PM ******/
+CREATE DATABASE [Pharmacy]
+ CONTAINMENT = NONE
+GO
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [Pharmacy].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [Pharmacy] SET ANSI_NULL_DEFAULT OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET ANSI_NULLS OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET ANSI_PADDING OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET ANSI_WARNINGS OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET ARITHABORT OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET AUTO_CLOSE ON 
+GO
+
+ALTER DATABASE [Pharmacy] SET AUTO_SHRINK OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET AUTO_UPDATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [Pharmacy] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET CURSOR_DEFAULT  GLOBAL 
+GO
+
+ALTER DATABASE [Pharmacy] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET NUMERIC_ROUNDABORT OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET QUOTED_IDENTIFIER OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET RECURSIVE_TRIGGERS OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET  ENABLE_BROKER 
+GO
+
+ALTER DATABASE [Pharmacy] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET TRUSTWORTHY OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET PARAMETERIZATION SIMPLE 
+GO
+
+ALTER DATABASE [Pharmacy] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET HONOR_BROKER_PRIORITY OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET RECOVERY SIMPLE 
+GO
+
+ALTER DATABASE [Pharmacy] SET  MULTI_USER 
+GO
+
+ALTER DATABASE [Pharmacy] SET PAGE_VERIFY CHECKSUM  
+GO
+
+ALTER DATABASE [Pharmacy] SET DB_CHAINING OFF 
+GO
+
+ALTER DATABASE [Pharmacy] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+
+ALTER DATABASE [Pharmacy] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+
+ALTER DATABASE [Pharmacy] SET DELAYED_DURABILITY = DISABLED 
+GO
+
+ALTER DATABASE [Pharmacy] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+
+ALTER DATABASE [Pharmacy] SET QUERY_STORE = OFF
+GO
+
+ALTER DATABASE [Pharmacy] SET  READ_WRITE 
+GO
+
+
+USE [Pharmacy]
+GO
+
+/****** Object:  Table [dbo].[medication]    Script Date: 7/31/2024 12:19:50 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[medication](
+	[medications] [int] IDENTITY(1,1) NOT NULL,
+	[medicationName] [varchar](250) NOT NULL,
+	[medicationType] [varchar](250) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[medications] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[UsersInformation]    Script Date: 7/31/2024 12:19:57 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[UsersInformation](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[UserRole] [varchar](50) NOT NULL,
+	[FullName] [varchar](250) NOT NULL,
+	[DateOfBirth] [varchar](250) NOT NULL,
+	[UserName] [varchar](250) NOT NULL,
+	[UserPassword] [varchar](250) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[UserName] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+/****** Object:  Table [dbo].[Customer]    Script Date: 7/31/2024 12:19:42 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Customer](
+	[CustomerId] [int] IDENTITY(1,1) NOT NULL,
+	[OrderStatus] [varchar](250) NULL,
+	[FirstName] [varchar](250) NOT NULL,
+	[MiddelIntial] [varchar](250) NOT NULL,
+	[LastName] [varchar](250) NOT NULL,
+	[Email] [varchar](250) NOT NULL,
+	[PhoneNumber] [varchar](250) NOT NULL,
+	[Medication1] [int] NULL,
+	[Medication2] [int] NULL,
+	[Medication3] [int] NULL,
+	[Medication4] [int] NULL,
+	[Medication5] [int] NULL,
+	[Medication6] [int] NULL,
+	[Medication7] [int] NULL,
+	[Medication8] [int] NULL,
+	[Medication9] [int] NULL,
+	[Medication10] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CustomerId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication1])
+REFERENCES [dbo].[medication] ([medications])
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication2])
+REFERENCES [dbo].[medication] ([medications])
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication3])
+REFERENCES [dbo].[medication] ([medications])
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication4])
+REFERENCES [dbo].[medication] ([medications])
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication5])
+REFERENCES [dbo].[medication] ([medications])
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication6])
+REFERENCES [dbo].[medication] ([medications])
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication7])
+REFERENCES [dbo].[medication] ([medications])
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication8])
+REFERENCES [dbo].[medication] ([medications])
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication9])
+REFERENCES [dbo].[medication] ([medications])
+GO
+
+ALTER TABLE [dbo].[Customer]  WITH CHECK ADD FOREIGN KEY([Medication10])
+REFERENCES [dbo].[medication] ([medications])
+GO
+insert into UsersInformation (UserRole, FullName, DateOfBirth, UserName, UserPassword)
+values('administrator', 'john doe', 'example', 'admin', 'admin');
+
+insert into UsersInformation (UserRole, FullName, DateOfBirth, UserName, UserPassword)
+values('Pharmacist', 'john doe', 'example', 'pharm', 'pharm');
+
